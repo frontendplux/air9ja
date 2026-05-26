@@ -116,7 +116,7 @@
                 <div class="col-8 col-md-4 text-center text-md-start">
                     <a href="#" class="text-dark text-decoration-none">
                         <h1 class="fw-black mb-0 tracking-tight" style="font-family: 'Georgia', serif; font-weight: 900; letter-spacing: -1px;">
-                            <?= $company_info['name'] ?>
+                            <?= $company_info['name'] ?>ffff
                         </h1>
                     </a>
                 </div>
