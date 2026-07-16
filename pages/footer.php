@@ -1,9 +1,9 @@
 <!-- FOOTER SECTION -->
 <footer class="bg-dark text-white pt-5 pb-3">
     <div class="container">
-        <div class="row g-4 mb-5 ">
+        <div class="row g-4 mb-5">
             
-            <!-- Column 1: Brand & Bio -->
+            <!-- Column 1: Brand, Bio & Socials -->
             <div class="col-lg-4 col-md-6">
                 <a class="fw-bold fs-3 text-success d-flex align-items-center text-decoration-none mb-3" href="#">
                     <i class="bi bi-cloud-lightning-fill me-2"></i>Air<span class="text-white">9ja</span>
@@ -20,20 +20,20 @@
                 </div>
             </div>
 
-            <!-- Column 2: Quick Links -->
-            <div class="col-lg-2 col-md-6">
+            <!-- Column 2: Quick Navigation -->
+            <div class="col-lg-2 col-6 col-md-6">
                 <h6 class="fw-bold text-white uppercase tracking-wider mb-3">Quick Links</h6>
                 <ul class="list-unstyled d-flex flex-column gap-2 small">
                     <li><a href="#" class="text-secondary text-decoration-none hover-success-link">Home</a></li>
-                    <li><a href="#projects" class="text-secondary text-decoration-none hover-success-link">Our Portfolio</a></li>
-                    <li><a href="#ebooks" class="text-secondary text-decoration-none hover-success-link">E-Books Store</a></li>
+                    <li><a href="#about" class="text-secondary text-decoration-none hover-success-link">About Us</a></li>
+                    <li><a href="#products" class="text-secondary text-decoration-none hover-success-link">E-Books Store</a></li>
+                    <li><a href="#gadgets-shop" class="text-secondary text-decoration-none hover-success-link">Developer Gear</a></li>
                     <li><a href="#academy" class="text-secondary text-decoration-none hover-success-link">Coding Academy</a></li>
-                    <li><a href="#team" class="text-secondary text-decoration-none hover-success-link">Meet Our Experts</a></li>
                 </ul>
             </div>
 
-            <!-- Column 3: Services Offered -->
-            <div class="col-lg-3 col-md-6">
+            <!-- Column 3: Studio Offerings -->
+            <div class="col-lg-3 col-6 col-md-6">
                 <h6 class="fw-bold text-white uppercase tracking-wider mb-3">Our Offerings</h6>
                 <ul class="list-unstyled d-flex flex-column gap-2 small">
                     <li><a href="#websites" class="text-secondary text-decoration-none hover-success-link"><i class="bi bi-laptop text-success me-1"></i> Web Development</a></li>
@@ -92,9 +92,12 @@
     }
 </style>
 
-<!-- Hook configurations onto our established ScrollReveal loop -->
+<!-- Bootstrap JS Bundle (Includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper JS & ScrollReveal Hook Configurations -->
 <script>
-    // 1. Initialize Swiper Slider 
+    // 1. Initialize E-books / Digital Products Slider 
     const swiper = new Swiper('.projectSwiper', {
         slidesPerView: 1.2,
         spaceBetween: 24,
@@ -109,7 +112,6 @@
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
         },
-        // Responsive breakpoint grids
         breakpoints: {
             576: { slidesPerView: 1.5 },
             768: { slidesPerView: 2 },
@@ -117,7 +119,29 @@
         }
     });
 
-    // 2. Initialize ScrollReveal Animations 
+    // 2. Initialize Gadgets & Laptop Gear Slider
+    const gadgetSwiper = new Swiper('.gadgetSwiper', {
+        slidesPerView: 1.2,
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination-gadget',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.gadget-next',
+            prevEl: '.gadget-prev',
+        },
+        breakpoints: {
+            576: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 }
+        }
+    });
+
+    // 3. Initialize ScrollReveal Animations 
     ScrollReveal({ 
         reset: false,
         distance: '60px',

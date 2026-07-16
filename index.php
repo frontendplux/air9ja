@@ -15,8 +15,8 @@ $company = [
         "github"    => "https://github.com/air9ja"
     ],
     "phone"       => [
-        "primary"   => "+234 800 AIR9JA",
-        "whatsapp"  => "+234 800 247952" // Numeric equivalent for +234 800 AIR9JA (247952)
+        "primary"   => "+234 808 279 2432",
+        "whatsapp"  => "+2348082792432" // Numeric equivalent for +234 800 AIR9JA (247952)
     ],
 ];
 switch ($parseURL) {
